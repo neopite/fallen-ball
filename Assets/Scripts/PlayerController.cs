@@ -5,8 +5,11 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] private float _cooldownForNextJumping;
+    private float _currentCooldownRemainTime;
     private Rigidbody2D _playerRG;
     private PlayerMovement _playerMovement;
+    
 
     void Start()
     {
@@ -16,9 +19,17 @@ public class PlayerController : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (_currentCooldownRemainTime <= 0)
         {
-            _playerMovement.Move(new Vector3(GetClickSideNumber()/2 ,0.5f,0));
+            if (Input.GetMouseButtonDown(0))
+            {
+                _playerMovement.Move(new Vector3(GetClickSideNumber() / 2, 0.5f, 0));
+                _currentCooldownRemainTime = _cooldownForNextJumping;
+            } 
+        }else
+        {
+            _currentCooldownRemainTime -= Time.deltaTime;
+            Debug.Log(_currentCooldownRemainTime);
         }
     }
 
