@@ -29,7 +29,6 @@ public class PlayerController : MonoBehaviour
         }else
         {
             _currentCooldownRemainTime -= Time.deltaTime;
-            Debug.Log(_currentCooldownRemainTime);
         }
     }
 
