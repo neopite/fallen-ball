@@ -8,6 +8,7 @@ namespace DefaultNamespace.UI
     {
         public static UIController Instance;
         public Window loseScreen;
+        public Window pauseScreen;
         private Window _currentWindow;
         
         private void Awake()
