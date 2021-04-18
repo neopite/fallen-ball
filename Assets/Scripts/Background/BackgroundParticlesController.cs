@@ -27,7 +27,6 @@ namespace DefaultNamespace
                 _currentStep = 0f;
             }
             else _currentStep += Math.Abs(_cameraController.MinY - _currentStep);
-            Debug.Log(_currentStep);
         }
 
         public void MoveTo(Vector3 target)

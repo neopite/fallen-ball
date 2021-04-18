@@ -5,7 +5,7 @@ using UnityEngine.UIElements;
 
 namespace Enemy
 {
-    public class MovableObstacke : MonoBehaviour,IMovable
+    public class MovableObstacle : MonoBehaviour,IMovable
     {
         [SerializeField] private float _length;
         [SerializeField] private float _speed;
