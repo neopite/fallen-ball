@@ -19,6 +19,7 @@ public class MovingPlatform : MonoBehaviour
     {
         _startPosition = _platformTransform.position;
         _platformRg = GetComponent<Rigidbody2D>();
+        FreezePlatformPosition();
     }
 
     // Update is called once per frame
@@ -44,4 +45,16 @@ public class MovingPlatform : MonoBehaviour
             Gizmos.DrawCube(_platformTransform.position+(_movingDirection*_distance),new Vector3(0.2f,0.8f,1f));   
         }else Gizmos.DrawCube(_platformTransform.position+(_movingDirection*_distance),new Vector3(0.8f,0.2f,1f)); 
     }
+
+    private void FreezePlatformPosition()
+    {
+        if (_movingDirection.x != 0)
+        {
+            _platformRg.constraints = RigidbodyConstraints2D.FreezePositionY;
+        }else if (_movingDirection.y != 0)
+        {
+            _platformRg.constraints = RigidbodyConstraints2D.FreezePositionX;
+        }
+    }
+    
 }
