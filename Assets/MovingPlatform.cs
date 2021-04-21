@@ -8,7 +8,7 @@ public class MovingPlatform : MonoBehaviour
 {
     [SerializeField]private Transform _platformTransform;
     [SerializeField] private Vector3 _movingDirection;
-    [SerializeField][Range(0, 40)] private float _speed;
+    [SerializeField][Range(0, 10)] private float _speed;
     [SerializeField] [Range(0, 10)] private float _distance;
     private bool _isFliped;
     private Vector3 _startPosition;
@@ -22,18 +22,18 @@ public class MovingPlatform : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
         Vector3 destinationVector = _isFliped ? _startPosition : _startPosition + (_movingDirection * _distance); ;
-        _movingVector = _movingDirection * (_speed * Time.deltaTime);
+        _movingVector = _movingDirection * (_speed);
         if ((destinationVector - _platformTransform.position ).magnitude < 0.05)
         {
             _movingDirection = -_movingDirection;
              _isFliped = !_isFliped;
         }
         _platformRg.velocity = _movingVector;
-        
+        Debug.Log(_platformRg.velocity.magnitude);
+
     }
 
     private void OnDrawGizmos()
