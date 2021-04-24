@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace DefaultNamespace.UI
 {
-    public class StaticWindow : Window  
+    public class StaticWindow : Window
     {
         public override void Open()
         {

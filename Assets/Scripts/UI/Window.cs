@@ -2,9 +2,9 @@
 
 namespace DefaultNamespace.UI
 {
-    public abstract class Window : MonoBehaviour 
+    public abstract class Window  : MonoBehaviour
     {
-        public abstract void Open();
-        public abstract void Close();
+         public abstract void Open();
+         public abstract void Close();
     }
 }

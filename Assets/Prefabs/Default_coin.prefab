@@ -97,6 +97,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _value: 1
   _currencyType: 0
+  _coinIncomeField: {fileID: 1208357526592913035, guid: 6c20556a21fcc7a4f8b19ee1cc5f0b18,
+    type: 3}
+  _canvas: {fileID: 0}
 --- !u!61 &-8052022806415064133
 BoxCollider2D:
   m_ObjectHideFlags: 0
