@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using TMPro;
 using UnityEngine;
 
 namespace DefaultNamespace
@@ -11,12 +12,15 @@ namespace DefaultNamespace
         
         private IDictionary<CurrencyType, int> _currencies;
         
-          public event Action<Currency> OnChangeCurrencyCount;
+        public event Action<Currency> OnChangeCurrencyCount;
         
-          public void ChangeCurrencyCount(Currency currency)
-          {
-              OnChangeCurrencyCount?.Invoke(currency);
-          }
+        public void ChangeCurrencyCount(Currency currency)
+        {
+            OnChangeCurrencyCount?.Invoke(currency);
+        }
+        
+        [SerializeField] private GameObject _coinIncomeField;
+
 
         private void Awake()
         {
@@ -29,13 +33,21 @@ namespace DefaultNamespace
             _currencies.Add(CurrencyType.Common , 0);
             _currencies.Add(CurrencyType.Premium , 0);
         }
-        /*
-         TODO : event system for changing money (событие на которое дожны будуд подписаться все кому нужен счётчик валюты)
-         */
+        
         public void AddCurrency(Currency currency)
         {
             _currencies[currency.CurrencyType] += currency.Value;
+            ShowPlusCoin(currency);
             ChangeCurrencyCount(currency);
+        }
+        
+        public void ShowPlusCoin(Currency currency)
+        {
+            GameObject incomeGm = Instantiate(_coinIncomeField, transform.position, Quaternion.identity);
+            TextMeshPro text = incomeGm.GetComponent<TextMeshPro>();
+            text.text = "+" + currency.Value;
+            LeanTween.move(text.GetComponent<RectTransform>(),
+                new Vector3(transform.position.x, transform.position.y + .5f, 0f), 1f).setEaseInOutQuart().setOnComplete(()=>Destroy(incomeGm));
         }
 
         private void OnTriggerEnter2D(Collider2D other)

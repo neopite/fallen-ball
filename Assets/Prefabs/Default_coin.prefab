@@ -97,9 +97,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _value: 1
   _currencyType: 0
-  _coinIncomeField: {fileID: 1208357526592913035, guid: 6c20556a21fcc7a4f8b19ee1cc5f0b18,
+  _coinIncomeField: {fileID: 7961119979030311398, guid: 338708f3919b760439efe7d8c82635cb,
     type: 3}
-  _canvas: {fileID: 0}
 --- !u!61 &-8052022806415064133
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -110,7 +109,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
