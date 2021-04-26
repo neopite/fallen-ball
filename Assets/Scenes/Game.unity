@@ -2820,7 +2820,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 121.8125, y: -56}
+  m_AnchoredPosition: {x: 121.812485, y: -56}
   m_SizeDelta: {x: 90, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &625470579
@@ -2903,8 +2903,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 625470582}
-        m_MethodName: LoadScene
+      - m_Target: {fileID: 570696163}
+        m_MethodName: closeScene
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4242,7 +4242,6 @@ GameObject:
   - component: {fileID: 919511132}
   - component: {fileID: 919511134}
   - component: {fileID: 919511133}
-  - component: {fileID: 919511136}
   - component: {fileID: 919511135}
   m_Layer: 5
   m_Name: Replay_level
@@ -4353,8 +4352,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 919511136}
-        m_MethodName: LoadScene
+      - m_Target: {fileID: 570696163}
+        m_MethodName: closeScene
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4364,18 +4363,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &919511136
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919511131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f26668e772c6df42b5a24075b7edef1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &919764178
 GameObject:
   m_ObjectHideFlags: 0
