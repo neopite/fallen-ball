@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     
     public void Move(Vector3 direction)
     {
-        direction.x = direction.x + _angle;
+        direction.x = direction.x > 0 ? direction.x + _angle : direction.x - _angle; 
         if (_playerRG.velocity.magnitude > 0.1f)
         {
             _playerRG.velocity = Vector2.zero;
