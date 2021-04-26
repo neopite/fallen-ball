@@ -20,6 +20,6 @@ public class BackgroundController : MonoBehaviour
 
     private void Move()
     {
-        gameObject.transform.position = new Vector3(_camera.position.x,_camera.position.y,20f);
+        gameObject.transform.position = new Vector3(_camera.position.x+0.62f,_camera.position.y+9.89f,4.22f);
     }
 }
