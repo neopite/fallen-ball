@@ -4,62 +4,35 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    [Header("Parameters")]
-    [SerializeField] private string _tagOfTarget;
-    [SerializeField] private float _cameraSpeed; 
-    
+    [Header("Parameters")] [SerializeField]
+    private string _targetTag;
+    [SerializeField][Range(0,1)] private float _cameraSpeed;
+
     private Transform _mainPlayerPos;
     private Transform _cameraTransform;
-
-    [SerializeField]private float _minY;
-
-    public float MinY
-    {
-        get { return _minY; }
-        private set { _minY = value; }
-    }
-
+    
     void Start()
     {
-        if (_tagOfTarget == null)
+        if (_targetTag == null)
         {
-            _tagOfTarget = "Player";
+            _targetTag = "Player";
         }
-        _mainPlayerPos = GameObject.FindWithTag(_tagOfTarget).transform;
+
+        _mainPlayerPos = GameObject.FindWithTag(_targetTag).transform;
         _cameraTransform = GetComponent<Transform>();
-        _cameraTransform.position = new Vector3(0,_mainPlayerPos.position.y , -10);
-        MinY = _cameraTransform.position.y - 5;
+        _cameraTransform.position = new Vector3(0, _mainPlayerPos.position.y, -10);
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (_mainPlayerPos)
+        Vector3 targetMove = new Vector3()
         {
-            if (_mainPlayerPos.position.y - MinY < 5)
-            {
-                Vector3 targetMove = new Vector3()
-                {
-                    x = 0,
-                    y = _cameraTransform.position.y,
-                    z = -10
-                };
-                Vector3 curPos = Vector3.Lerp(_cameraTransform.position, targetMove, _cameraSpeed);
-                _cameraTransform.position = curPos;
-            }
-            else
-            {
-                // if(_mainPlayerPos.position.y > _minY)
-                Vector3 targetMove = new Vector3()
-                {
-                    x = 0,
-                    y = _mainPlayerPos.position.y,
-                    z = -10
-                };
-                Vector3 curPos = Vector3.Lerp(_cameraTransform.position, targetMove, _cameraSpeed);
-                _cameraTransform.position = curPos;
-            }
-            if (MinY < _cameraTransform.position.y - 5) MinY = _cameraTransform.position.y - 5;
-        }
+            x = 0,
+            y = _mainPlayerPos.position.y,
+            z = -10
+        };
+        Vector3 curPos = Vector3.Lerp(_cameraTransform.position, targetMove, _cameraSpeed);
+        _cameraTransform.position = curPos;
     }
 }

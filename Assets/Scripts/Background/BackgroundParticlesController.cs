@@ -6,27 +6,31 @@ namespace DefaultNamespace
     public class BackgroundParticlesController : MonoBehaviour
     {
         [SerializeField] private ParticleSystem _backgroundParticle;
-        private Transform _particlePoint;
-        private CameraController _cameraController;
         [SerializeField] private float _stepRespawn;
+        private Transform _particlePoint;
+        private Transform _camera;
         private float _currentStep;
+        private float _prevYValue;
 
         void Start()
         {
             _particlePoint = _backgroundParticle.GetComponent<Transform>();
-            _cameraController = GetComponent<CameraController>();
+            _particlePoint.position = new Vector3(0, -5, 5);
+            _camera = Camera.main.transform;
             _backgroundParticle.Play();
-            _currentStep = _cameraController.MinY;
         }
 
         void Update()
         {
-            if (_currentStep > _stepRespawn)
+            Vector2 currPosition = _camera.transform.position;
+            if (Math.Abs(_currentStep) > _stepRespawn)
             {
-                _particlePoint.position = new Vector3(0, _cameraController.MinY,12);
-                _currentStep = 0f;
+                _particlePoint.position = new Vector3(0, _particlePoint.position.y + (_currentStep<0?-5:5),5);
+                _currentStep = 0;
             }
-            else _currentStep += Math.Abs(_cameraController.MinY - _currentStep);
+            else _currentStep += currPosition.y - _prevYValue;
+                    
+            _prevYValue =currPosition.y;
         }
 
         public void MoveTo(Vector3 target)
