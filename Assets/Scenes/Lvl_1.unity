@@ -700,6 +700,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1259686110932645355, guid: 437ebb400d1030148a40515fc86ae10b,
+        type: 3}
+      propertyPath: _targetPos
+      value: 
+      objectReference: {fileID: 1944898736}
+    - target: {fileID: 1259686111157993401, guid: 437ebb400d1030148a40515fc86ae10b,
+        type: 3}
+      propertyPath: _targetPos
+      value: 
+      objectReference: {fileID: 1944898736}
+    - target: {fileID: 1259686111321020500, guid: 437ebb400d1030148a40515fc86ae10b,
+        type: 3}
+      propertyPath: _targetPos
+      value: 
+      objectReference: {fileID: 1944898736}
+    - target: {fileID: 1259686112079079408, guid: 437ebb400d1030148a40515fc86ae10b,
+        type: 3}
+      propertyPath: _targetPos
+      value: 
+      objectReference: {fileID: 1944898736}
+    - target: {fileID: 1259686112093375649, guid: 437ebb400d1030148a40515fc86ae10b,
+        type: 3}
+      propertyPath: _targetPos
+      value: 
+      objectReference: {fileID: 1944898736}
     - target: {fileID: 1259686112238292222, guid: 437ebb400d1030148a40515fc86ae10b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5671,6 +5696,12 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
+--- !u!4 &1944898736 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2127316422362351727, guid: 314a68e0594396d43bb486824801d156,
+    type: 3}
+  m_PrefabInstance: {fileID: 2127316422201556914}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1957771431
 GameObject:
   m_ObjectHideFlags: 0
