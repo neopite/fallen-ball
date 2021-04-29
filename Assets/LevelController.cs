@@ -21,7 +21,11 @@ public class LevelController : MonoBehaviour
     public void FinishLevel()
     {
          _levelCompleteIndex = SceneManager.GetActiveScene().buildIndex;
-        PlayerPrefs.SetInt("LevelComplete",_levelCompleteIndex);
+         int lastCompleteLevel = PlayerPrefs.GetInt("LevelComplete");
+         if (lastCompleteLevel + 1 == _levelCompleteIndex)
+         {
+             PlayerPrefs.SetInt("LevelComplete",_levelCompleteIndex);
+         }
     }
 
     public void LoadNextLevel()

@@ -10,8 +10,8 @@ public class LevelManager : MonoBehaviour
     
     public void LoadLevelFromMenu(int scene)
     {
+        SceneManager.LoadScene(scene);
         _mainMenu.SetActive(true);
         _levelMenu.SetActive(false);
-        SceneManager.LoadScene(scene);
     }
 }

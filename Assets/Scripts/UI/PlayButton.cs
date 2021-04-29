@@ -1,9 +1,10 @@
 ﻿using System;
+using UI;
 using UnityEngine;
 
 namespace DefaultNamespace.UI
 {
-    public class PlayButton : AnimatedWindow
+    public class PlayButton : AnimatedButton
     {
         [SerializeField] private CanvasGroup _canvasGroup;
         [SerializeField] private GameObject _mainMenu;
@@ -13,22 +14,11 @@ namespace DefaultNamespace.UI
         {
             DontDestroyOnLoad(gameObject);
         }
-
-        public override void Open()
-        {
-            _canvasGroup.alpha = 0;
-            _canvasGroup.LeanAlpha(1f, .5f).setOnComplete(OpenSettings);
-        }
-
-        public override void Close()
-        {
-            throw new System.NotImplementedException();
-        }
         
-        private void OpenSettings()
+        public override void OnCompleteAnimationAction()
         {
             _mainMenu.SetActive(false);
-            _sceneLoader.LoadScene(1);
+            _sceneLoader.LoadScene(PlayerPrefs.GetInt("LevelComplete",0)+1);
         }
     }
 }

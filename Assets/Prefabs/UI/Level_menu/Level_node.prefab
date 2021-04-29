@@ -64,7 +64,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 4
+  m_text: 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 442fcb5f03cc7684abb0fa1c656218b1, type: 2}
   m_sharedMaterial: {fileID: 8526338452734267422, guid: 442fcb5f03cc7684abb0fa1c656218b1,
@@ -146,6 +146,7 @@ GameObject:
   - component: {fileID: 3175597399035514804}
   - component: {fileID: 7864692339019242219}
   - component: {fileID: 5593545349345321716}
+  - component: {fileID: 5964863076562907892}
   m_Layer: 5
   m_Name: Level_node
   m_TagString: Untagged
@@ -254,17 +255,34 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: LoadScene
-        m_Mode: 3
+      - m_Target: {fileID: 5964863076562907892}
+        m_MethodName: Click
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 4
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &5964863076562907892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3523298252995272499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7f9ef59f2474776ba6e3ad0bf09c634, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _canvasGroup: {fileID: 0}
+  _mainMenu: {fileID: 0}
+  _levelMenu: {fileID: 0}
+  _sceneLoader: {fileID: 0}
+  _levelIndex: {fileID: 3460555987064216390}
 --- !u!1 &4261531385899329722
 GameObject:
   m_ObjectHideFlags: 0
