@@ -11,9 +11,10 @@ public class FinishInteraction : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" && !LevelController.Instance.IsLevelFinished)
         {
             LevelController.Instance.FinishLevel();
+            LevelController.Instance.IsLevelFinished = true;
             _winScreen.Open();
         }    
     }

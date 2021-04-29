@@ -9,6 +9,9 @@ public class LevelController : MonoBehaviour
 {
     public static LevelController Instance;
     private int _levelCompleteIndex;
+    private bool _isLevelFinished;
+
+    public bool IsLevelFinished { get; set; }
 
     public void Start()
     {
