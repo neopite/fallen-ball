@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlayerController : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class PlayerController : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
+                if(EventSystem.current.IsPointerOverGameObject()) return; //UI layer
                 _playerMovement.Move(new Vector3(GetClickSideNumber() / 2, 0.5f, 0));
                 _currentCooldownRemainTime = _cooldownForNextJumping;
             } 
