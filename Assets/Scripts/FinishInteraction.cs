@@ -14,6 +14,8 @@ public class FinishInteraction : MonoBehaviour
         if (other.tag == "Player" && !LevelController.Instance.IsLevelFinished)
         {
             LevelController.Instance.FinishLevel();
+            other.GetComponent<Rigidbody2D>().gravityScale = 0f;
+            other.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0.2f);
             LevelController.Instance.IsLevelFinished = true;
             _winScreen.Open();
         }    

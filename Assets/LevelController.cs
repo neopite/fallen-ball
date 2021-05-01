@@ -30,7 +30,7 @@ public class LevelController : MonoBehaviour
              PlayerPrefs.SetInt("LevelComplete",_levelCompleteIndex);
          }
     }
-
+    
     public void LoadNextLevel()
     {
         SceneManager.LoadScene(_levelCompleteIndex+1);

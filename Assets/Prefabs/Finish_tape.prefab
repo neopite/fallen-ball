@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5207752723190375536}
   - component: {fileID: 5207752723190375539}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: finishing_gradient
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67,8 +67,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -785955941
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1b0644c4fe6c62a4183d584db7a2f6fa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 5207752724639103414}
   - component: {fileID: 5207752724639103415}
   - component: {fileID: 5207752724639103412}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Finish_tape
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,7 +128,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.50773764, y: 1.3895988}
+  m_Offset: {x: -0.50773764, y: 1.39}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -164,7 +164,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5207752724976953875}
   - component: {fileID: 5207752724976953874}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: finishing_tape
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -221,8 +221,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -785955941
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 07fb5c2edb4808643bb50cf7c01d05b7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

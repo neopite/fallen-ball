@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 1925421087465236535}
   - component: {fileID: 29406600570493944}
   - component: {fileID: 7254584721782833708}
-  m_Layer: 5
+  - component: {fileID: 2281595858076614819}
+  m_Layer: 0
   m_Name: Coin_collection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,5 +174,22 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 29406600570493944}
   m_maskType: 0
+  _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
+--- !u!114 &2281595858076614819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7961119979030311398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32da9a1317381574f9f38410435ebb9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mySortingLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  _renderer: {fileID: 0}
