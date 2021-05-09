@@ -1,7 +1,9 @@
-﻿namespace DefaultNamespace.Enemy
+﻿using UnityEngine;
+
+namespace DefaultNamespace.Enemy
 {
-    public interface IMovable
+    public interface IMovable 
     {
-      void Move();
+        void Move();
     }
 }

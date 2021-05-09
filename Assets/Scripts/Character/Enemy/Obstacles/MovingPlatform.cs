@@ -8,7 +8,7 @@ using UnityEngineInternal;
 public class MovingPlatform : MonoBehaviour , IMovable
 {
     [SerializeField]private Transform _platformTransform;
-    [SerializeField] private Vector3 _movingDirection;
+    [SerializeField]private Vector3 _movingDirection;
     [SerializeField][Range(0, 10)] private float _speed;
     [SerializeField] [Range(0, 10)] private float _distance;
     private bool _isFliped;
@@ -39,7 +39,6 @@ public class MovingPlatform : MonoBehaviour , IMovable
         }
         _platformRg.velocity = _movingVector;
     }
-
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
@@ -59,5 +58,4 @@ public class MovingPlatform : MonoBehaviour , IMovable
             _platformRg.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
         }
     }
-    
 }

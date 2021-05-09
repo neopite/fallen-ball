@@ -100,8 +100,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef43a000e69bb3348a4d54bdfa0814d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _jumpForce: 10
-  _angle: -0.2
+  _jumpForce: 10.5
+  _angle: -0.099
 --- !u!114 &8559870031399120295
 MonoBehaviour:
   m_ObjectHideFlags: 0

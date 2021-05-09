@@ -7,9 +7,12 @@ namespace UI
     {
         [SerializeField] private CanvasGroup _background;
         [SerializeField] private RectTransform _winMenu;
+        [SerializeField] private GameObject _pauseIcon;
+
 
         public override void Open()
         {
+            _pauseIcon.SetActive(false);
             gameObject.SetActive(true);
             _background.alpha = 0;
             _background.LeanAlpha(0.5f, 1f);
