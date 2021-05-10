@@ -1,10 +1,11 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Parallax : MonoBehaviour
 {
-    [SerializeField] private float _speedMultiplier;
+    [SerializeField][Range(1,100)] private float _speed;
     [SerializeField] private Transform _targetPos;
     private Material _material;
 
@@ -16,7 +17,8 @@ public class Parallax : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 offset = new Vector2(0f, _targetPos.position.y / 100f);
+        Vector2 offset = new Vector2(0f, _targetPos.position.y/ 100f/_speed);
         _material.mainTextureOffset = offset;
     }
+    
 }

@@ -5,9 +5,9 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField]private float _jumpForce;
+    [SerializeField] [Range(-0.5f, 0.5f)] private float _angle;
     private Rigidbody2D _playerRG;
     private Vector3 _jumpDirection;
-    [SerializeField] [Range(-0.5f, 0.5f)] private float _angle;
 
 
     void Start()
