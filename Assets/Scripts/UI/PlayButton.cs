@@ -18,7 +18,7 @@ namespace DefaultNamespace.UI
         public override void OnCompleteAnimationAction()
         {
             _mainMenu.SetActive(false);
-            _sceneLoader.LoadScene(PlayerPrefs.GetInt("LevelComplete",0)+1);
+            _sceneLoader.LoadScene(PlayerPrefs.GetInt("LevelComplete",1));
         }
     }
 }

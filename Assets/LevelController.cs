@@ -28,6 +28,9 @@ public class LevelController : MonoBehaviour
          if (lastCompleteLevel + 1 == _levelCompleteIndex)
          {
              PlayerPrefs.SetInt("LevelComplete",_levelCompleteIndex);
+         }else if (SceneManager.sceneCount - 1 == _levelCompleteIndex)
+         { 
+             _levelCompleteIndex = SceneManager.GetActiveScene().buildIndex - 1;    
          }
     }
     

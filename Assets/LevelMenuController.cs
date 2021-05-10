@@ -18,7 +18,7 @@ public class LevelMenuController : MonoBehaviour
         }
         for (int i = 1; i <= lastCompletedLevel; i++)
         {
-            _allLevels[i].interactable = true;
+            _allLevels[i].interactable = true; 
             SetButtonAvailabilityColor(_allLevels[i],0);
         }
     }
