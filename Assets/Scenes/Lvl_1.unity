@@ -334,6 +334,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 90632382}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &90767986 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 90767986, guid: 0e46c708c32341e4a9a84a227ca921f8,
+    type: 3}
+  m_PrefabInstance: {fileID: 738112119}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c26357327eac4015bf673a53c7c504b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &142967024
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1294,31 +1306,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1259686110932645355, guid: 437ebb400d1030148a40515fc86ae10b,
-        type: 3}
-      propertyPath: _targetPos
+    - target: {fileID: 1368561641, guid: 437ebb400d1030148a40515fc86ae10b, type: 3}
+      propertyPath: _parallaxCamera
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1259686111157993401, guid: 437ebb400d1030148a40515fc86ae10b,
-        type: 3}
-      propertyPath: _targetPos
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1259686111321020500, guid: 437ebb400d1030148a40515fc86ae10b,
-        type: 3}
-      propertyPath: _targetPos
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1259686112079079408, guid: 437ebb400d1030148a40515fc86ae10b,
-        type: 3}
-      propertyPath: _targetPos
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1259686112093375649, guid: 437ebb400d1030148a40515fc86ae10b,
-        type: 3}
-      propertyPath: _targetPos
-      value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 90767986}
     - target: {fileID: 1259686112238292222, guid: 437ebb400d1030148a40515fc86ae10b,
         type: 3}
       propertyPath: m_LocalPosition.x
