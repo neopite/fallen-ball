@@ -19,6 +19,7 @@ public class LevelController : MonoBehaviour
         {
             Instance = this;
         }else Destroy(Instance);
+        SetCurrentLevelContext();
     }
 
     public void FinishLevel()
@@ -32,6 +33,11 @@ public class LevelController : MonoBehaviour
          { 
              _levelCompleteIndex = SceneManager.GetActiveScene().buildIndex - 1;    
          }
+    }
+
+    private void SetCurrentLevelContext()
+    {
+        PlayerPrefs.SetInt("CurrentLevel",SceneManager.GetActiveScene().buildIndex);
     }
     
     public void LoadNextLevel()

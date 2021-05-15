@@ -6713,13 +6713,6 @@ MonoBehaviour:
   - {fileID: 1647160424}
   - {fileID: 238373192}
   - {fileID: 862316345}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1 &2137075045
 GameObject:
   m_ObjectHideFlags: 0
