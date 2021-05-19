@@ -5,7 +5,7 @@ using UnityEngine.UIElements;
 using Button = UnityEngine.UI.Button;
 
 
-public class LevelMenuController : MonoBehaviour
+public class LevelMenuHandler : MonoBehaviour
 {
     [SerializeField] private List<Button> _allLevels;
     

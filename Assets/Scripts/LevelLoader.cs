@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LevelManager : MonoBehaviour
+public class LevelLoader : MonoBehaviour
 {
     [SerializeField] private GameObject _mainMenu;
     [SerializeField] private GameObject _levelMenu;
     
-    public void LoadLevelFromMenu(int scene)
+    public void LoadLevel(int scene)
     {
         SceneManager.LoadScene(scene);
         _mainMenu.SetActive(true);

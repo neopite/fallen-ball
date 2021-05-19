@@ -10,8 +10,7 @@ namespace UI.Button
         [SerializeField] private GameObject _levelMenu;
         [SerializeField] private SceneLoader _sceneLoader;
         [SerializeField] private TextMeshProUGUI _levelIndex;
-
-
+        
         public override void Click()
         {
             _canvasGroup.alpha = 0;
