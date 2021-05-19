@@ -1,4 +1,5 @@
 ﻿using System;
+using Singleton;
 using UnityEngine;
 
 namespace DefaultNamespace
@@ -7,6 +8,7 @@ namespace DefaultNamespace
     {
         [SerializeField] private CanvasGroup _canvasGroup;
         [SerializeField]private SceneLoader _sceneLoader;
+        
         public void Awake()
         {
             OpenScene();
@@ -26,7 +28,7 @@ namespace DefaultNamespace
         
         private void OnCompletee(int toScene)
         {
-            if(Time.timeScale == 0 ) GamePause.UnpauseGame();
+            if(Time.timeScale == 0 ) Singleton<GamePause>.Instance.UnpauseGame();
             _sceneLoader.LoadScene(toScene);
         }
     }
