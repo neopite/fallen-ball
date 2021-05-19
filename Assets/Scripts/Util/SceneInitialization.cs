@@ -26,7 +26,7 @@ namespace DefaultNamespace
         
         private void OnCompletee(int toScene)
         {
-            if(Time.timeScale == 0 ) GamePause.Instance.UnpauseGame();
+            if(Time.timeScale == 0 ) GamePause.UnpauseGame();
             _sceneLoader.LoadScene(toScene);
         }
     }

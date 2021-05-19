@@ -1,5 +1,6 @@
 ﻿using System;
 using DefaultNamespace.UI;
+using Singleton;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -7,25 +8,15 @@ namespace DefaultNamespace
 {
     public class GamePause : MonoBehaviour
     {
-        public static GamePause Instance;
-
-        private void Awake()
+        public static void PauseGame()
         {
-            if (Instance == null)
-            {
-                Instance = this;
-            }else Destroy(gameObject);
-        }
-
-        public void PauseGame()
-        {
-            UIController.Instance.pauseScreen.Open();
+            Singleton<UIController>.Instance.pauseScreen.Open();
             Time.timeScale = 0;
         }
 
-        public void UnpauseGame()
+        public static void UnpauseGame()
         {
-            UIController.Instance.pauseScreen.Close();
+            Singleton<UIController>.Instance.pauseScreen.Close();
             Time.timeScale = 1;
         }
     }

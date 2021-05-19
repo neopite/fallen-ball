@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 
 public class LevelController : MonoBehaviour
 {
-    public static LevelController Instance;
     private int _levelCompleteIndex;
     private bool _isLevelFinished;
 
@@ -15,10 +14,6 @@ public class LevelController : MonoBehaviour
 
     public void Start()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-        }else Destroy(Instance);
         SetCurrentLevelContext();
     }
 

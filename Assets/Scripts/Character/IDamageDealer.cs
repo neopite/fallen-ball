@@ -1,6 +1,7 @@
 ﻿namespace DefaultNamespace
 {
-    public abstract class IDamageDealer
+    public interface IDamageDealer
     {
+        void DealDamage(Player player);
     }
 }

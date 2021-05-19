@@ -5,14 +5,19 @@ using UnityEngine;
 
 namespace Character.Enemy.Characters
 {
-    public class ColliderHitEnemy : MonoBehaviour
+    public class ColliderHitEnemy : MonoBehaviour , IDamageDealer
     {
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (other.TryGetComponent<Player>(out Player player))
             {
-                other.GetComponent<Player>().ReceiveDamage();
+                DealDamage(player);
             }
+        }
+
+        public void DealDamage(Player player)
+        {
+            player.ReceiveDamage();
         }
     }
 }

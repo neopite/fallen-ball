@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using DefaultNamespace;
+using Singleton;
 using UI;
 using UnityEngine;
 
@@ -11,12 +12,13 @@ public class FinishInteraction : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player" && !LevelController.Instance.IsLevelFinished)
+        LevelController levelController = Singleton<LevelController>.Instance;
+        if (other.tag == "Player" && !levelController.IsLevelFinished)
         {
-            LevelController.Instance.FinishLevel();
+            levelController.FinishLevel();
             other.GetComponent<Rigidbody2D>().gravityScale = 0f;
             other.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0.2f);
-            LevelController.Instance.IsLevelFinished = true;
+            levelController.IsLevelFinished = true;
             _winScreen.Open();
         }    
     }

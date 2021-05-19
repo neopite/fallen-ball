@@ -1,4 +1,5 @@
 ﻿using System;
+using Singleton;
 using TMPro;
 using UnityEngine;
 
@@ -10,7 +11,7 @@ namespace DefaultNamespace
 
         public void Start()
         {
-            Wallet.Instance.OnChangeCurrencyCount += ChangeCurrencyAmount;
+            Singleton<Wallet>.Instance.OnChangeCurrencyCount += ChangeCurrencyAmount;
         }
         
         private void ChangeCurrencyAmount(Currency currency)

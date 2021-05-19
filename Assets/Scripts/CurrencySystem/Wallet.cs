@@ -8,8 +8,8 @@ namespace DefaultNamespace
 {
     public class Wallet : MonoBehaviour
     {
-        public static Wallet Instance;
-        
+        [SerializeField] private GameObject _coinIncomeField;
+
         private IDictionary<CurrencyType, int> _currencies;
         
         public event Action<Currency> OnChangeCurrencyCount;
@@ -19,16 +19,9 @@ namespace DefaultNamespace
             OnChangeCurrencyCount?.Invoke(currency);
         }
         
-        [SerializeField] private GameObject _coinIncomeField;
-
 
         private void Awake()
         {
-            if (Instance == null)
-            {
-                Instance = this;
-            }else Destroy(gameObject);
-            
             _currencies = new Dictionary<CurrencyType, int>();
             _currencies.Add(CurrencyType.Common , 0);
             _currencies.Add(CurrencyType.Premium , 0);

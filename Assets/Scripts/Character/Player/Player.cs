@@ -1,4 +1,5 @@
 ﻿using DefaultNamespace.UI;
+using Singleton;
 using UnityEngine;
 
 namespace DefaultNamespace
@@ -10,7 +11,7 @@ namespace DefaultNamespace
         {
             ParticleSystem particleSystem = (ParticleSystem)Instantiate(_deadParicle, gameObject.transform.position, Quaternion.identity);
             particleSystem.Play();
-            UIController.Instance.loseScreen.Open();
+            Singleton<UIController>.Instance.loseScreen.Open();
             gameObject.SetActive(false);
         }
     }
